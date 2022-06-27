@@ -1,0 +1,70 @@
+$colorPrimario: blanchedalmond;
+
+.letrasColor {
+    color: blanchedalmond;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+@mixin FontMargPad ($fontsize, $margin, $padding) {
+    font-size: $fontsize;
+    margin: $margin;
+    padding: $padding;
+}
+
+#encabezado h1 {
+    @extend .letrasColor;
+    @include FontMargPad (8rem, 15px, 0px);
+}
+
+#encabezado img {
+    @include FontMargPad (0px, 0px, 0px 0px 15px 15px);
+}
+#navegacion a {
+    @extend .letrasColor;
+    @include FontMargPad (1.25rem, 0px, 10px);
+    display: block;
+    color: $colorPrimario;
+    background-color: brown;
+    text-decoration: none;
+}
+.subtitulo {
+    @extend .letrasColor;
+    @include FontMargPad (4.5rem, auto, 8px);
+    text-align: center;
+    color: $colorPrimario;
+    background-color: rgb(202, 65, 47);
+}
+.textoFooter{
+    @include FontMargPad (1rem, 0px, 0px);
+    color: $colorPrimario;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    list-style: none;
+
+    a {
+        text-decoration: none;
+        color: rgb(240, 196, 139);
+    }
+}
+
+.texto{
+    @include FontMargPad (1.5rem, auto, 30px);
+    color: $colorPrimario;
+}
+
+.bordes{
+    border: 5px solid rgb(231, 190, 8);
+}
+
+.logosAncho {
+    width: 100px;
+}
+@media (min-width: 1200px) {
+    .sinEstilo {
+        list-style: none;
+    }
+}
+section h3{
+    text-align: center;
+    color: $colorPrimario;
+    @include FontMargPad (2.2rem, auto, 3px);
+}

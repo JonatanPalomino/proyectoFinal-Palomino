@@ -1,0 +1,20 @@
+#encabezado h1:hover{
+    color: rgb(251, 255, 198);
+}
+#navegacion a:hover{
+    color: rgb(252, 252, 226);
+    background-color: rgb(255, 41, 41);
+    transform: translate(7px, -7px);
+}
+#navegacion a {
+    transition: transform .5s;
+}
+.subtituloMov {
+    transition: transform .5s;
+    filter: blur(3px);
+}
+.subtituloMov:hover{
+    transform: translate(0px, -8px);
+    filter: blur(0px);
+    filter: contrast(150%);
+}
